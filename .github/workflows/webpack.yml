@@ -22,3 +22,7 @@ jobs:
         npm install
         npm run build -- --env tokenServerUrl=http://example.com:1234
         npm run package
+    - name: Upload Github Pages artifact
+      uses: actions/upload-pages-artifact@v2.0.0
+      with:
+        path: platform/dist
